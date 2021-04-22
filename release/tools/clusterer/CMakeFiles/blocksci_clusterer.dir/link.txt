@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/blocksci_clusterer.dir/main.cpp.o  -o blocksci_clusterer  -Wl,-rpath,/home/zmengaa/BlockSci/release/src: ../../src/libblocksci.so -pthread 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -g -Wall  -shared -Wl,-soname,libbitcoinapi.so.0 -o libbitcoinapi.so.0.1.0 CMakeFiles/bitcoinapi.dir/bitcoinapi.cpp.o  -Wl,-rpath,/usr/local/lib64: /usr/lib64/libcurl.so /usr/local/lib64/libjsoncpp.so /usr/local/lib64/libjsonrpccpp-common.so /usr/local/lib64/libjsonrpccpp-client.so 
