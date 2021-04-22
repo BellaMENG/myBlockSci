@@ -24,18 +24,23 @@ int main(int argc, const char * argv[]) {
     
     Blockchain chain(argv[1]);
 
-    int64_t blockCount = 0;
-    int64_t txCount = 0;
+    int64_t block_index = 0;
+    int64_t tx_index = 0;
     int64_t inputCount = 0;
     int64_t outputCount = 0;
-
+    
     for (auto block : chain) {
-        blockCount += 1;
         RANGES_FOR(auto tx, block) {
-            txCount += 1;
             inputCount += tx.inputCount();
             outputCount += tx.outputCount();
+            if (1000 <= block_index < 1030) {
+                cout << " tx_index: " << tx_index << "; tx_hash: " << tx.hash;
+            }
+            tx_index += 1;
         }
+        block_index += 1;
+        if (block_index > 1030)
+            break;
     }
 
     std::cout << "Chain contains:" << std::endl;
