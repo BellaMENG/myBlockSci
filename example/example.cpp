@@ -19,6 +19,7 @@
 #include <iomanip>
 
 using namespace blocksci;
+using namespace std;
 
 int main(int argc, const char * argv[]) {
     
@@ -34,7 +35,7 @@ int main(int argc, const char * argv[]) {
             inputCount += tx.inputCount();
             outputCount += tx.outputCount();
             if (1000 <= block_index < 1030) {
-                cout << " tx_index: " << tx_index << "; tx_hash: " << tx.hash;
+                cout << " tx_index: " << tx_index << "; tx_hash: " << tx.getHash();
             }
             tx_index += 1;
         }
@@ -44,8 +45,8 @@ int main(int argc, const char * argv[]) {
     }
 
     std::cout << "Chain contains:" << std::endl;
-    std::cout << blockCount << " blocks" << std::endl;
-    std::cout << txCount << " transactions" << std::endl;
+    std::cout << block_index + 1 << " blocks" << std::endl;
+    std::cout << tx_index + 1 << " transactions" << std::endl;
     std::cout << inputCount << " inputs" << std::endl;
     std::cout << outputCount << " outputs" << std::endl;
 
