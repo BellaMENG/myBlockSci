@@ -18,6 +18,8 @@
 #include <string>
 #include <iomanip>
 
+#include "index_addresses.hpp"
+
 using namespace blocksci;
 using namespace std;
 
