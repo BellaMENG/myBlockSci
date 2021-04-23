@@ -1,4 +1,3 @@
-#include "util.hpp"
 #include "index_addresses.hpp"
 
 using namespace std;
