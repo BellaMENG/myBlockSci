@@ -1,2 +1,2 @@
 
-void index_addresses(int argc, const char * argv[]);
+void index_addresses(int , const char **);
