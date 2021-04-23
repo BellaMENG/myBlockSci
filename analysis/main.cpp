@@ -1,8 +1,6 @@
 #include "util.hpp"
 #include "index_addresses.hpp"
 
-using namespace blocksci;
-using namespace std;
 
 int main(int argc, const char * argv[]) {
     

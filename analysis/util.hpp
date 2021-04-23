@@ -9,3 +9,6 @@
 #include <blocksci/heuristics/taint.hpp>
 
 #include <range/v3/all.hpp>
+
+using namespace blocksci;
+using namespace std;
