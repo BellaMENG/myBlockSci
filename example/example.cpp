@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
             outputCount += tx.outputCount();
             if (1000 <= block_index < 1030) {
                 // check how to cout the uint256
-                cout << " tx_index: " << tx_index << "; tx_hash: " << tx.getHash().getHex();
+                cout << " tx_index: " << tx_index << "; tx_hash: " << tx.getHash().GetHex();
             }
             tx_index += 1;
         }
