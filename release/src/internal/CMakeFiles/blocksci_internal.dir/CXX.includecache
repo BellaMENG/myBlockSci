@@ -2310,7 +2310,7 @@ cstddef
 rocksdb/cache.h
 ../external/rocksdb/include/rocksdb/rocksdb/cache.h
 
-../include/blocksci/core/address_types.hpp
+../src/internal/../../include/blocksci/core/address_types.hpp
 blocksci/blocksci_export.h
 -
 cstddef
@@ -2320,7 +2320,7 @@ functional
 tuple
 -
 
-../include/blocksci/core/bitcoin_uint256.hpp
+../src/internal/../../include/blocksci/core/bitcoin_uint256.hpp
 blocksci/blocksci_export.h
 -
 cassert
@@ -2332,21 +2332,21 @@ functional
 string
 -
 
-../include/blocksci/core/core_fwd.hpp
+../src/internal/../../include/blocksci/core/core_fwd.hpp
 
-../include/blocksci/core/dedup_address.hpp
+../src/internal/../../include/blocksci/core/dedup_address.hpp
 dedup_address_type.hpp
-../include/blocksci/core/dedup_address_type.hpp
+../src/internal/../../include/blocksci/core/dedup_address_type.hpp
 functional
 -
 
-../include/blocksci/core/dedup_address_type.hpp
+../src/internal/../../include/blocksci/core/dedup_address_type.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/meta.hpp
 -
 
-../include/blocksci/core/hash_combine.hpp
+../src/internal/../../include/blocksci/core/hash_combine.hpp
 blocksci/blocksci_export.h
 -
 cstdint
@@ -2354,7 +2354,7 @@ cstdint
 functional
 -
 
-../include/blocksci/core/inout.hpp
+../src/internal/../../include/blocksci/core/inout.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/address_types.hpp
@@ -2364,7 +2364,7 @@ blocksci/core/hash_combine.hpp
 blocksci/core/typedefs.hpp
 -
 
-../include/blocksci/core/inout_pointer.hpp
+../src/internal/../../include/blocksci/core/inout_pointer.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/hash_combine.hpp
@@ -2374,13 +2374,13 @@ cstdint
 functional
 -
 
-../include/blocksci/core/meta.hpp
+../src/internal/../../include/blocksci/core/meta.hpp
 array
 -
 tuple
 -
 
-../include/blocksci/core/raw_address.hpp
+../src/internal/../../include/blocksci/core/raw_address.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/address_types.hpp
@@ -2388,13 +2388,13 @@ blocksci/core/address_types.hpp
 functional
 -
 
-../include/blocksci/core/raw_block.hpp
+../src/internal/../../include/blocksci/core/raw_block.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/bitcoin_uint256.hpp
 -
 
-../include/blocksci/core/raw_transaction.hpp
+../src/internal/../../include/blocksci/core/raw_transaction.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/inout.hpp
@@ -2402,7 +2402,7 @@ blocksci/core/inout.hpp
 blocksci/core/typedefs.hpp
 -
 
-../include/blocksci/core/script_data.hpp
+../src/internal/../../include/blocksci/core/script_data.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/bitcoin_uint256.hpp
@@ -2420,7 +2420,7 @@ string
 vector
 -
 
-../include/blocksci/core/transaction_data.hpp
+../src/internal/../../include/blocksci/core/transaction_data.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/bitcoin_uint256.hpp
@@ -2430,11 +2430,11 @@ blocksci/core/raw_transaction.hpp
 cstdint
 -
 
-../include/blocksci/core/typedefs.hpp
+../src/internal/../../include/blocksci/core/typedefs.hpp
 blocksci/blocksci_export.h
 -
 
-../include/blocksci/scripts/bitcoin_pubkey.hpp
+../src/internal/../../include/blocksci/scripts/bitcoin_pubkey.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/bitcoin_uint256.hpp
@@ -2842,5 +2842,5 @@ blocksci/core/dedup_address_type.hpp
 array
 -
 
-src/blocksci/blocksci_export.h
+src/internal/../blocksci/blocksci_export.h
 

@@ -274,7 +274,6 @@ valgrind_ctime_test_OBJECTS = $(am_valgrind_ctime_test_OBJECTS)
 #valgrind_ctime_test_DEPENDENCIES =  \
 #	libsecp256k1.la \
 #	$(am__DEPENDENCIES_1) \
-#	$(am__DEPENDENCIES_1) \
 #	$(am__DEPENDENCIES_2)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -358,15 +357,15 @@ am__include_HEADERS_DIST = include/secp256k1.h \
 am__noinst_HEADERS_DIST = src/scalar.h src/scalar_4x64.h \
 	src/scalar_8x32.h src/scalar_low.h src/scalar_impl.h \
 	src/scalar_4x64_impl.h src/scalar_8x32_impl.h \
-	src/scalar_low_impl.h src/group.h src/group_impl.h \
-	src/num_gmp.h src/num_gmp_impl.h src/ecdsa.h src/ecdsa_impl.h \
-	src/eckey.h src/eckey_impl.h src/ecmult.h src/ecmult_impl.h \
-	src/ecmult_const.h src/ecmult_const_impl.h src/ecmult_gen.h \
-	src/ecmult_gen_impl.h src/num.h src/num_impl.h \
-	src/field_10x26.h src/field_10x26_impl.h src/field_5x52.h \
-	src/field_5x52_impl.h src/field_5x52_int128_impl.h \
-	src/field_5x52_asm_impl.h src/assumptions.h src/util.h \
-	src/scratch.h src/scratch_impl.h src/selftest.h src/testrand.h \
+	src/scalar_low_impl.h src/group.h src/group_impl.h src/ecdsa.h \
+	src/ecdsa_impl.h src/eckey.h src/eckey_impl.h src/ecmult.h \
+	src/ecmult_impl.h src/ecmult_const.h src/ecmult_const_impl.h \
+	src/ecmult_gen.h src/ecmult_gen_impl.h src/field_10x26.h \
+	src/field_10x26_impl.h src/field_5x52.h src/field_5x52_impl.h \
+	src/field_5x52_int128_impl.h src/field_5x52_asm_impl.h \
+	src/modinv32.h src/modinv32_impl.h src/modinv64.h \
+	src/modinv64_impl.h src/assumptions.h src/util.h src/scratch.h \
+	src/scratch_impl.h src/selftest.h src/testrand.h \
 	src/testrand_impl.h src/hash.h src/hash_impl.h src/field.h \
 	src/field_impl.h src/bench.h contrib/lax_der_parsing.h \
 	contrib/lax_der_parsing.c contrib/lax_der_privatekey_parsing.h \
@@ -631,11 +630,11 @@ CCASFLAGS = -fPIC
 CCDEPMODE = depmode=gcc3
 CC_FOR_BUILD = gcc
 CFLAGS = -O2 -fvisibility=hidden -std=c89 -pedantic -Wall -Wextra -Wcast-align -Wnested-externs -Wshadow -Wstrict-prototypes -Wundef -Wno-unused-function -Wno-long-long -Wno-overlength-strings -W -fPIC
-CFLAGS_FOR_BUILD = -Wall -Wextra -Wno-unused-function -g -O2
+CFLAGS_FOR_BUILD = -O2 -fvisibility=hidden -std=c89 -pedantic -Wall -Wextra -Wcast-align -Wnested-externs -Wshadow -Wstrict-prototypes -Wundef -Wno-unused-function -Wno-long-long -Wno-overlength-strings -W -fPIC
 CPP = gcc -E
-CPPFLAGS = -fPIC
-CPPFLAGS_FOR_BUILD =  $(am__append_11)
-CPP_FOR_BUILD = gcc -E
+CPPFLAGS =  -fPIC
+CPPFLAGS_FOR_BUILD =  -fPIC $(am__append_11)
+CPP_FOR_BUILD = 
 CRYPTO_CFLAGS = 
 CRYPTO_LIBS = 
 CYGPATH_W = echo
@@ -688,7 +687,7 @@ PKG_CONFIG_LIBDIR =
 PKG_CONFIG_PATH = 
 PORT = 
 RANLIB = /usr/bin/ranlib
-SECP_INCLUDES = 
+SECP_INCLUDES =  
 SECP_LIBS = 
 SECP_TEST_INCLUDES = 
 SECP_TEST_LIBS = 
@@ -703,7 +702,7 @@ abs_top_builddir = /home/zmengaa/BlockSci/release/external/secp256k1/src/project
 abs_top_srcdir = /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1
 ac_ct_AR = ar
 ac_ct_CC = gcc
-ac_ct_CC_FOR_BUILD = gcc
+ac_ct_CC_FOR_BUILD = 
 ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
@@ -758,18 +757,18 @@ include_HEADERS = include/secp256k1.h include/secp256k1_preallocated.h \
 noinst_HEADERS = src/scalar.h src/scalar_4x64.h src/scalar_8x32.h \
 	src/scalar_low.h src/scalar_impl.h src/scalar_4x64_impl.h \
 	src/scalar_8x32_impl.h src/scalar_low_impl.h src/group.h \
-	src/group_impl.h src/num_gmp.h src/num_gmp_impl.h src/ecdsa.h \
-	src/ecdsa_impl.h src/eckey.h src/eckey_impl.h src/ecmult.h \
-	src/ecmult_impl.h src/ecmult_const.h src/ecmult_const_impl.h \
-	src/ecmult_gen.h src/ecmult_gen_impl.h src/num.h \
-	src/num_impl.h src/field_10x26.h src/field_10x26_impl.h \
+	src/group_impl.h src/ecdsa.h src/ecdsa_impl.h src/eckey.h \
+	src/eckey_impl.h src/ecmult.h src/ecmult_impl.h \
+	src/ecmult_const.h src/ecmult_const_impl.h src/ecmult_gen.h \
+	src/ecmult_gen_impl.h src/field_10x26.h src/field_10x26_impl.h \
 	src/field_5x52.h src/field_5x52_impl.h \
 	src/field_5x52_int128_impl.h src/field_5x52_asm_impl.h \
-	src/assumptions.h src/util.h src/scratch.h src/scratch_impl.h \
-	src/selftest.h src/testrand.h src/testrand_impl.h src/hash.h \
-	src/hash_impl.h src/field.h src/field_impl.h src/bench.h \
-	contrib/lax_der_parsing.h contrib/lax_der_parsing.c \
-	contrib/lax_der_privatekey_parsing.h \
+	src/modinv32.h src/modinv32_impl.h src/modinv64.h \
+	src/modinv64_impl.h src/assumptions.h src/util.h src/scratch.h \
+	src/scratch_impl.h src/selftest.h src/testrand.h \
+	src/testrand_impl.h src/hash.h src/hash_impl.h src/field.h \
+	src/field_impl.h src/bench.h contrib/lax_der_parsing.h \
+	contrib/lax_der_parsing.c contrib/lax_der_privatekey_parsing.h \
 	contrib/lax_der_privatekey_parsing.c $(am__append_13) \
 	$(am__append_16) $(am__append_19) $(am__append_21)
 COMMON_LIB = 
@@ -779,33 +778,32 @@ pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libsecp256k1.pc
 ##libsecp256k1_common_la_SOURCES = src/asm/field_10x26_arm.s
 libsecp256k1_la_SOURCES = src/secp256k1.c
-libsecp256k1_la_CPPFLAGS = -DSECP256K1_BUILD -I$(top_srcdir)/include \
-	-I$(top_srcdir)/src $(SECP_INCLUDES) $(am__append_1)
+libsecp256k1_la_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/src \
+	$(SECP_INCLUDES) $(am__append_1)
 libsecp256k1_la_LIBADD = $(SECP_LIBS) $(COMMON_LIB)
 #bench_verify_SOURCES = src/bench_verify.c
 #bench_verify_LDADD = libsecp256k1.la $(SECP_LIBS) $(SECP_TEST_LIBS) $(COMMON_LIB)
 # SECP_TEST_INCLUDES are only used here for CRYPTO_CPPFLAGS
-#bench_verify_CPPFLAGS = -DSECP256K1_BUILD $(SECP_TEST_INCLUDES)
+#bench_verify_CPPFLAGS = $(SECP_TEST_INCLUDES)
 #bench_sign_SOURCES = src/bench_sign.c
 #bench_sign_LDADD = libsecp256k1.la $(SECP_LIBS) $(SECP_TEST_LIBS) $(COMMON_LIB)
 #bench_internal_SOURCES = src/bench_internal.c
 #bench_internal_LDADD = $(SECP_LIBS) $(COMMON_LIB)
-#bench_internal_CPPFLAGS = -DSECP256K1_BUILD $(SECP_INCLUDES)
+#bench_internal_CPPFLAGS = $(SECP_INCLUDES)
 #bench_ecmult_SOURCES = src/bench_ecmult.c
 #bench_ecmult_LDADD = $(SECP_LIBS) $(COMMON_LIB)
-#bench_ecmult_CPPFLAGS = -DSECP256K1_BUILD $(SECP_INCLUDES)
+#bench_ecmult_CPPFLAGS = $(SECP_INCLUDES)
 #tests_SOURCES = src/tests.c
-#tests_CPPFLAGS = -DSECP256K1_BUILD -I$(top_srcdir)/src \
+#tests_CPPFLAGS = -I$(top_srcdir)/src \
 #	-I$(top_srcdir)/include $(SECP_INCLUDES) \
 #	$(SECP_TEST_INCLUDES) $(am__append_4) \
 #	$(am__append_6)
 #valgrind_ctime_test_SOURCES = src/valgrind_ctime_test.c
-#valgrind_ctime_test_LDADD = libsecp256k1.la $(SECP_LIBS) $(SECP_LIBS) $(COMMON_LIB)
+#valgrind_ctime_test_LDADD = libsecp256k1.la $(SECP_LIBS) $(COMMON_LIB)
 #tests_LDADD = $(SECP_LIBS) $(SECP_TEST_LIBS) $(COMMON_LIB)
 #tests_LDFLAGS = -static
 #exhaustive_tests_SOURCES = src/tests_exhaustive.c
 #exhaustive_tests_CPPFLAGS =  \
-#	-DSECP256K1_BUILD \
 #	-I$(top_srcdir)/src \
 #	$(SECP_INCLUDES) $(am__append_9)
 #exhaustive_tests_LDADD = $(SECP_LIBS) $(COMMON_LIB)
@@ -1766,7 +1764,7 @@ uninstall-am: uninstall-includeHEADERS uninstall-libLTLIBRARIES \
 .PRECIOUS: Makefile
 
 gen_%.o: src/gen_%.c src/libsecp256k1-config.h
-	$(CC_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) $(CFLAGS_FOR_BUILD) -c $< -o $@
+	$(CC_FOR_BUILD) $(DEFS) $(CPPFLAGS_FOR_BUILD) $(CFLAGS_FOR_BUILD) -c $< -o $@
 
 $(gen_context_BIN): $(gen_context_OBJECTS)
 	$(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) $^ -o $@

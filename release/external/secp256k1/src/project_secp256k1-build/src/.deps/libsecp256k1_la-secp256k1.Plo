@@ -1,10 +1,10 @@
 src/libsecp256k1_la-secp256k1.lo: \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/secp256k1.c \
  /usr/include/stdc-predef.h \
- /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/include/secp256k1.h \
+ /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/../include/secp256k1.h \
  /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h \
- /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/include/secp256k1_preallocated.h \
- /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/include/secp256k1.h \
+ /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/../include/secp256k1_preallocated.h \
+ /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/../include/secp256k1.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/assumptions.h \
  /usr/lib/gcc/x86_64-redhat-linux/8/include/limits.h \
  /usr/lib/gcc/x86_64-redhat-linux/8/include/syslimits.h \
@@ -27,12 +27,12 @@ src/libsecp256k1_la-secp256k1.lo: \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
  /usr/include/bits/stdio.h /usr/include/valgrind/memcheck.h \
  /usr/include/valgrind/valgrind.h \
- /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/num_impl.h \
- /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/num.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field_impl.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field_5x52_impl.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field_5x52.h \
+ /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modinv64_impl.h \
+ /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modinv64.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field_5x52_asm_impl.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/scalar_impl.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/scalar.h \
@@ -59,17 +59,18 @@ src/libsecp256k1_la-secp256k1.lo: \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/scratch_impl.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/selftest.h \
  /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modules/recovery/main_impl.h \
- /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/include/secp256k1_recovery.h
+ /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modules/recovery/../../../include/secp256k1_recovery.h \
+ /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modules/recovery/../../../include/secp256k1.h
 
 /usr/include/stdc-predef.h:
 
-/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/include/secp256k1.h:
+/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/../include/secp256k1.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h:
 
-/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/include/secp256k1_preallocated.h:
+/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/../include/secp256k1_preallocated.h:
 
-/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/include/secp256k1.h:
+/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/../include/secp256k1.h:
 
 /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/assumptions.h:
 
@@ -147,10 +148,6 @@ src/libsecp256k1-config.h:
 
 /usr/include/valgrind/valgrind.h:
 
-/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/num_impl.h:
-
-/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/num.h:
-
 /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field_impl.h:
 
 /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field_5x52_impl.h:
@@ -158,6 +155,10 @@ src/libsecp256k1-config.h:
 /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field.h:
 
 /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field_5x52.h:
+
+/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modinv64_impl.h:
+
+/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modinv64.h:
 
 /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/field_5x52_asm_impl.h:
 
@@ -211,4 +212,6 @@ src/ecmult_static_context.h:
 
 /home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modules/recovery/main_impl.h:
 
-/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/include/secp256k1_recovery.h:
+/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modules/recovery/../../../include/secp256k1_recovery.h:
+
+/home/zmengaa/BlockSci/release/external/secp256k1/src/project_secp256k1/src/modules/recovery/../../../include/secp256k1.h:

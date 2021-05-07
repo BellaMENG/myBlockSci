@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/blocksci_clusterer.dir/main.cpp.o"
-  "blocksci_clusterer"
   "blocksci_clusterer.pdb"
+  "blocksci_clusterer"
 )
 
 # Per-language clean rules from dependency scanning.

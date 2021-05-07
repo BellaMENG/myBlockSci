@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tests.dir/node.cpp.o"
   "CMakeFiles/tests.dir/rawtransaction.cpp.o"
   "CMakeFiles/tests.dir/wallet.cpp.o"
-  "bitcoinapi_tests"
   "bitcoinapi_tests.pdb"
+  "bitcoinapi_tests"
 )
 
 # Per-language clean rules from dependency scanning.

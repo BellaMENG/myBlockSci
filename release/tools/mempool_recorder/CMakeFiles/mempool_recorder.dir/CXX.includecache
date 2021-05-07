@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-../external/bitcoin-api-cpp/src/bitcoinapi/bitcoinapi.h
+../external/bitcoin-api-cpp/src/bitcoinapi/../bitcoinapi/bitcoinapi.h
 types.h
-../external/bitcoin-api-cpp/src/bitcoinapi/types.h
+../external/bitcoin-api-cpp/src/bitcoinapi/../bitcoinapi/types.h
 exception.h
-../external/bitcoin-api-cpp/src/bitcoinapi/exception.h
+../external/bitcoin-api-cpp/src/bitcoinapi/../bitcoinapi/exception.h
 
-../external/bitcoin-api-cpp/src/bitcoinapi/exception.h
+../external/bitcoin-api-cpp/src/bitcoinapi/../bitcoinapi/exception.h
 string
 -
 sstream
@@ -26,7 +26,7 @@ json/value.h
 jsonrpccpp/client.h
 -
 
-../external/bitcoin-api-cpp/src/bitcoinapi/types.h
+../external/bitcoin-api-cpp/src/bitcoinapi/../bitcoinapi/types.h
 string
 -
 vector
@@ -638,9 +638,9 @@ windows.h
 unistd.h
 -
 
-../include/blocksci/address/address_fwd.hpp
+../src/../include/blocksci/../blocksci/address/address_fwd.hpp
 
-../include/blocksci/chain/block.hpp
+../src/../include/blocksci/../blocksci/chain/block.hpp
 blocksci/blocksci_export.h
 -
 blocksci/chain/transaction_range.hpp
@@ -654,7 +654,7 @@ chrono
 vector
 -
 
-../include/blocksci/chain/block_range.hpp
+../src/../include/blocksci/../blocksci/chain/block_range.hpp
 blocksci/blocksci_export.h
 -
 blocksci/chain/block.hpp
@@ -666,7 +666,7 @@ type_traits
 future
 -
 
-../include/blocksci/chain/blockchain.hpp
+../src/../include/blocksci/../blocksci/chain/blockchain.hpp
 blocksci/blocksci_export.h
 -
 blocksci/address/address_fwd.hpp
@@ -680,9 +680,9 @@ type_traits
 future
 -
 
-../include/blocksci/chain/chain_fwd.hpp
+../src/../include/blocksci/../blocksci/chain/chain_fwd.hpp
 
-../include/blocksci/chain/input.hpp
+../src/../include/blocksci/../blocksci/chain/input.hpp
 blocksci/blocksci_export.h
 -
 blocksci/address/address_fwd.hpp
@@ -698,7 +698,7 @@ blocksci/core/inout.hpp
 blocksci/core/raw_transaction.hpp
 -
 
-../include/blocksci/chain/input_pointer.hpp
+../src/../include/blocksci/../blocksci/chain/input_pointer.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/inout_pointer.hpp
@@ -706,7 +706,7 @@ blocksci/core/inout_pointer.hpp
 string
 -
 
-../include/blocksci/chain/input_range.hpp
+../src/../include/blocksci/../blocksci/chain/input_range.hpp
 blocksci/blocksci_export.h
 -
 blocksci/chain/input.hpp
@@ -714,7 +714,7 @@ blocksci/chain/input.hpp
 range/v3/range/concepts.hpp
 -
 
-../include/blocksci/chain/output.hpp
+../src/../include/blocksci/../blocksci/chain/output.hpp
 blocksci/blocksci_export.h
 -
 blocksci/address/address_fwd.hpp
@@ -730,7 +730,7 @@ blocksci/core/raw_transaction.hpp
 range/v3/utility/optional.hpp
 -
 
-../include/blocksci/chain/output_pointer.hpp
+../src/../include/blocksci/../blocksci/chain/output_pointer.hpp
 blocksci/blocksci_export.h
 -
 blocksci/chain/chain_fwd.hpp
@@ -742,7 +742,7 @@ string
 vector
 -
 
-../include/blocksci/chain/output_range.hpp
+../src/../include/blocksci/../blocksci/chain/output_range.hpp
 blocksci/blocksci_export.h
 -
 blocksci/chain/output.hpp
@@ -750,7 +750,7 @@ blocksci/chain/output.hpp
 range/v3/range/concepts.hpp
 -
 
-../include/blocksci/chain/transaction.hpp
+../src/../include/blocksci/../blocksci/chain/transaction.hpp
 blocksci/blocksci_export.h
 -
 blocksci/chain/chain_fwd.hpp
@@ -770,13 +770,13 @@ range/v3/utility/optional.hpp
 chrono
 -
 
-../include/blocksci/chain/transaction_range.hpp
+../src/../include/blocksci/../blocksci/chain/transaction_range.hpp
 blocksci/blocksci_export.h
 -
 blocksci/chain/transaction.hpp
 -
 
-../include/blocksci/core/address_types.hpp
+../src/../include/blocksci/../blocksci/core/address_types.hpp
 blocksci/blocksci_export.h
 -
 cstddef
@@ -786,7 +786,7 @@ functional
 tuple
 -
 
-../include/blocksci/core/bitcoin_uint256.hpp
+../src/../include/blocksci/../blocksci/core/bitcoin_uint256.hpp
 blocksci/blocksci_export.h
 -
 cassert
@@ -798,7 +798,7 @@ functional
 string
 -
 
-../include/blocksci/core/hash_combine.hpp
+../src/../include/blocksci/../blocksci/core/hash_combine.hpp
 blocksci/blocksci_export.h
 -
 cstdint
@@ -806,7 +806,7 @@ cstdint
 functional
 -
 
-../include/blocksci/core/inout.hpp
+../src/../include/blocksci/../blocksci/core/inout.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/address_types.hpp
@@ -816,7 +816,7 @@ blocksci/core/hash_combine.hpp
 blocksci/core/typedefs.hpp
 -
 
-../include/blocksci/core/inout_pointer.hpp
+../src/../include/blocksci/../blocksci/core/inout_pointer.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/hash_combine.hpp
@@ -826,13 +826,13 @@ cstdint
 functional
 -
 
-../include/blocksci/core/raw_block.hpp
+../src/../include/blocksci/../blocksci/core/raw_block.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/bitcoin_uint256.hpp
 -
 
-../include/blocksci/core/raw_transaction.hpp
+../src/../include/blocksci/../blocksci/core/raw_transaction.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/inout.hpp
@@ -840,7 +840,7 @@ blocksci/core/inout.hpp
 blocksci/core/typedefs.hpp
 -
 
-../include/blocksci/core/transaction_data.hpp
+../src/../include/blocksci/../blocksci/core/transaction_data.hpp
 blocksci/blocksci_export.h
 -
 blocksci/core/bitcoin_uint256.hpp
@@ -850,11 +850,11 @@ blocksci/core/raw_transaction.hpp
 cstdint
 -
 
-../include/blocksci/core/typedefs.hpp
+../src/../include/blocksci/../blocksci/core/typedefs.hpp
 blocksci/blocksci_export.h
 -
 
-../include/blocksci/external/concepts/concepts.hpp
+../src/../include/blocksci/external/concepts/concepts.hpp
 initializer_list
 -
 utility
@@ -866,7 +866,7 @@ concepts/swap.hpp
 concepts/type_traits.hpp
 -
 
-../include/blocksci/external/concepts/swap.hpp
+../src/../include/blocksci/external/concepts/swap.hpp
 tuple
 -
 utility
@@ -876,7 +876,7 @@ type_traits
 meta/meta.hpp
 -
 
-../include/blocksci/external/concepts/type_traits.hpp
+../src/../include/blocksci/external/concepts/type_traits.hpp
 tuple
 -
 utility
@@ -886,7 +886,7 @@ type_traits
 meta/meta.hpp
 -
 
-../include/blocksci/external/meta/meta.hpp
+../src/../include/blocksci/external/meta/meta.hpp
 cstddef
 -
 initializer_list
@@ -898,13 +898,13 @@ type_traits
 utility
 -
 
-../include/blocksci/external/meta/meta_fwd.hpp
+../src/../include/blocksci/external/meta/meta_fwd.hpp
 type_traits
 -
 utility
 -
 
-../include/blocksci/external/range/v3/action/concepts.hpp
+../src/../include/blocksci/external/range/v3/action/concepts.hpp
 utility
 -
 meta/meta.hpp
@@ -920,7 +920,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/algorithm/aux_/partition_point_n.hpp
+../src/../include/blocksci/external/range/v3/algorithm/aux_/partition_point_n.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/functional/identity.hpp
@@ -936,7 +936,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/algorithm/aux_/upper_bound_n.hpp
+../src/../include/blocksci/external/range/v3/algorithm/aux_/upper_bound_n.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/algorithm/aux_/partition_point_n.hpp
@@ -956,7 +956,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/algorithm/max.hpp
+../src/../include/blocksci/external/range/v3/algorithm/max.hpp
 initializer_list
 -
 range/v3/range_fwd.hpp
@@ -984,7 +984,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/algorithm/min.hpp
+../src/../include/blocksci/external/range/v3/algorithm/min.hpp
 initializer_list
 -
 range/v3/range_fwd.hpp
@@ -1012,7 +1012,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/algorithm/partition_point.hpp
+../src/../include/blocksci/external/range/v3/algorithm/partition_point.hpp
 meta/meta.hpp
 -
 range/v3/range_fwd.hpp
@@ -1044,7 +1044,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/algorithm/upper_bound.hpp
+../src/../include/blocksci/external/range/v3/algorithm/upper_bound.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/algorithm/aux_/upper_bound_n.hpp
@@ -1070,7 +1070,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/detail/adl_get.hpp
+../src/../include/blocksci/external/range/v3/detail/adl_get.hpp
 cstddef
 -
 concepts/concepts.hpp
@@ -1082,7 +1082,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/detail/config.hpp
+../src/../include/blocksci/external/range/v3/detail/config.hpp
 iosfwd
 -
 version
@@ -1100,11 +1100,11 @@ meta/meta_fwd.hpp
 type_traits
 -
 
-../include/blocksci/external/range/v3/detail/disable_warnings.hpp
+../src/../include/blocksci/external/range/v3/detail/disable_warnings.hpp
 range/v3/detail/config.hpp
 -
 
-../include/blocksci/external/range/v3/detail/range_access.hpp
+../src/../include/blocksci/external/range/v3/detail/range_access.hpp
 cstddef
 -
 utility
@@ -1122,9 +1122,9 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/detail/reenable_warnings.hpp
+../src/../include/blocksci/external/range/v3/detail/reenable_warnings.hpp
 
-../include/blocksci/external/range/v3/detail/satisfy_boost_range.hpp
+../src/../include/blocksci/external/range/v3/detail/satisfy_boost_range.hpp
 meta/meta.hpp
 -
 range/v3/range_fwd.hpp
@@ -1134,7 +1134,7 @@ range/v3/range/concepts.hpp
 range/v3/range/traits.hpp
 -
 
-../include/blocksci/external/range/v3/detail/variant.hpp
+../src/../include/blocksci/external/range/v3/detail/variant.hpp
 iterator
 -
 memory
@@ -1172,7 +1172,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/bind.hpp
+../src/../include/blocksci/external/range/v3/functional/bind.hpp
 functional
 -
 type_traits
@@ -1190,7 +1190,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/bind_back.hpp
+../src/../include/blocksci/external/range/v3/functional/bind_back.hpp
 tuple
 -
 meta/meta.hpp
@@ -1206,7 +1206,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/comparisons.hpp
+../src/../include/blocksci/external/range/v3/functional/comparisons.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -1216,7 +1216,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/compose.hpp
+../src/../include/blocksci/external/range/v3/functional/compose.hpp
 type_traits
 -
 utility
@@ -1234,7 +1234,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/concepts.hpp
+../src/../include/blocksci/external/range/v3/functional/concepts.hpp
 concepts/concepts.hpp
 -
 range/v3/functional/invoke.hpp
@@ -1244,7 +1244,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/identity.hpp
+../src/../include/blocksci/external/range/v3/functional/identity.hpp
 range/v3/detail/config.hpp
 -
 range/v3/detail/disable_warnings.hpp
@@ -1252,7 +1252,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/indirect.hpp
+../src/../include/blocksci/external/range/v3/functional/indirect.hpp
 utility
 -
 concepts/concepts.hpp
@@ -1270,7 +1270,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/invoke.hpp
+../src/../include/blocksci/external/range/v3/functional/invoke.hpp
 functional
 -
 type_traits
@@ -1288,7 +1288,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/pipeable.hpp
+../src/../include/blocksci/external/range/v3/functional/pipeable.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -1304,7 +1304,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/functional/reference_wrapper.hpp
+../src/../include/blocksci/external/range/v3/functional/reference_wrapper.hpp
 type_traits
 -
 utility
@@ -1324,7 +1324,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/access.hpp
+../src/../include/blocksci/external/range/v3/iterator/access.hpp
 iterator
 -
 type_traits
@@ -1350,7 +1350,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/basic_iterator.hpp
+../src/../include/blocksci/external/range/v3/iterator/basic_iterator.hpp
 type_traits
 -
 utility
@@ -1382,7 +1382,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/common_iterator.hpp
+../src/../include/blocksci/external/range/v3/iterator/common_iterator.hpp
 cstdint
 -
 iterator
@@ -1408,7 +1408,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/concepts.hpp
+../src/../include/blocksci/external/range/v3/iterator/concepts.hpp
 iterator
 -
 type_traits
@@ -1438,7 +1438,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/default_sentinel.hpp
+../src/../include/blocksci/external/range/v3/iterator/default_sentinel.hpp
 range/v3/detail/config.hpp
 -
 range/v3/utility/static_const.hpp
@@ -1448,7 +1448,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/operations.hpp
+../src/../include/blocksci/external/range/v3/iterator/operations.hpp
 type_traits
 -
 utility
@@ -1466,7 +1466,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/reverse_iterator.hpp
+../src/../include/blocksci/external/range/v3/iterator/reverse_iterator.hpp
 utility
 -
 range/v3/range_fwd.hpp
@@ -1480,7 +1480,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/traits.hpp
+../src/../include/blocksci/external/range/v3/iterator/traits.hpp
 iterator
 -
 type_traits
@@ -1500,7 +1500,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/iterator/unreachable_sentinel.hpp
+../src/../include/blocksci/external/range/v3/iterator/unreachable_sentinel.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/iterator/concepts.hpp
@@ -1510,7 +1510,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/range/access.hpp
+../src/../include/blocksci/external/range/v3/range/access.hpp
 functional
 -
 initializer_list
@@ -1538,7 +1538,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/range/concepts.hpp
+../src/../include/blocksci/external/range/v3/range/concepts.hpp
 initializer_list
 -
 type_traits
@@ -1572,7 +1572,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/range/conversion.hpp
+../src/../include/blocksci/external/range/v3/range/conversion.hpp
 meta/meta.hpp
 -
 range/v3/range_fwd.hpp
@@ -1596,7 +1596,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/range/dangling.hpp
+../src/../include/blocksci/external/range/v3/range/dangling.hpp
 utility
 -
 concepts/concepts.hpp
@@ -1614,7 +1614,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/range/primitives.hpp
+../src/../include/blocksci/external/range/v3/range/primitives.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -1632,7 +1632,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/range/traits.hpp
+../src/../include/blocksci/external/range/v3/range/traits.hpp
 array
 -
 iterator
@@ -1654,13 +1654,13 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/range_for.hpp
+../src/../include/blocksci/external/range/v3/range_for.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/range/access.hpp
 -
 
-../include/blocksci/external/range/v3/range_fwd.hpp
+../src/../include/blocksci/external/range/v3/range_fwd.hpp
 type_traits
 -
 utility
@@ -1680,7 +1680,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/addressof.hpp
+../src/../include/blocksci/external/range/v3/utility/addressof.hpp
 memory
 -
 type_traits
@@ -1696,7 +1696,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/box.hpp
+../src/../include/blocksci/external/range/v3/utility/box.hpp
 cstdlib
 -
 type_traits
@@ -1716,7 +1716,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/common_tuple.hpp
+../src/../include/blocksci/external/range/v3/utility/common_tuple.hpp
 utility
 -
 meta/meta.hpp
@@ -1740,7 +1740,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/common_type.hpp
+../src/../include/blocksci/external/range/v3/utility/common_type.hpp
 utility
 -
 meta/meta.hpp
@@ -1756,7 +1756,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/compressed_pair.hpp
+../src/../include/blocksci/external/range/v3/utility/compressed_pair.hpp
 type_traits
 -
 utility
@@ -1776,7 +1776,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/get.hpp
+../src/../include/blocksci/external/range/v3/utility/get.hpp
 meta/meta.hpp
 -
 concepts/concepts.hpp
@@ -1788,7 +1788,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/in_place.hpp
+../src/../include/blocksci/external/range/v3/utility/in_place.hpp
 range/v3/range_fwd.hpp
 -
 range/v3/utility/static_const.hpp
@@ -1798,7 +1798,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/move.hpp
+../src/../include/blocksci/external/range/v3/utility/move.hpp
 type_traits
 -
 meta/meta.hpp
@@ -1812,7 +1812,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/optional.hpp
+../src/../include/blocksci/external/range/v3/utility/optional.hpp
 exception
 -
 initializer_list
@@ -1838,7 +1838,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/semiregular_box.hpp
+../src/../include/blocksci/external/range/v3/utility/semiregular_box.hpp
 type_traits
 -
 utility
@@ -1862,9 +1862,9 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/static_const.hpp
+../src/../include/blocksci/external/range/v3/utility/static_const.hpp
 
-../include/blocksci/external/range/v3/utility/swap.hpp
+../src/../include/blocksci/external/range/v3/utility/swap.hpp
 concepts/swap.hpp
 -
 range/v3/range_fwd.hpp
@@ -1876,7 +1876,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/utility/tuple_algorithm.hpp
+../src/../include/blocksci/external/range/v3/utility/tuple_algorithm.hpp
 initializer_list
 -
 tuple
@@ -1900,9 +1900,9 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/version.hpp
+../src/../include/blocksci/external/range/v3/version.hpp
 
-../include/blocksci/external/range/v3/view/adaptor.hpp
+../src/../include/blocksci/external/range/v3/view/adaptor.hpp
 meta/meta.hpp
 -
 concepts/concepts.hpp
@@ -1930,7 +1930,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/view/all.hpp
+../src/../include/blocksci/external/range/v3/view/all.hpp
 type_traits
 -
 meta/meta.hpp
@@ -1956,7 +1956,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/view/facade.hpp
+../src/../include/blocksci/external/range/v3/view/facade.hpp
 type_traits
 -
 utility
@@ -1980,7 +1980,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/view/interface.hpp
+../src/../include/blocksci/external/range/v3/view/interface.hpp
 iosfwd
 -
 meta/meta.hpp
@@ -2008,7 +2008,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/view/ref.hpp
+../src/../include/blocksci/external/range/v3/view/ref.hpp
 concepts/concepts.hpp
 -
 range/v3/range_fwd.hpp
@@ -2030,7 +2030,7 @@ range/v3/detail/satisfy_boost_range.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/view/subrange.hpp
+../src/../include/blocksci/external/range/v3/view/subrange.hpp
 tuple
 -
 type_traits
@@ -2060,7 +2060,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/range/v3/view/transform.hpp
+../src/../include/blocksci/external/range/v3/view/transform.hpp
 iterator
 -
 type_traits
@@ -2108,7 +2108,7 @@ range/v3/detail/reenable_warnings.hpp
 range/v3/detail/satisfy_boost_range.hpp
 -
 
-../include/blocksci/external/range/v3/view/view.hpp
+../src/../include/blocksci/external/range/v3/view/view.hpp
 type_traits
 -
 utility
@@ -2136,7 +2136,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../include/blocksci/external/std/detail/associated_types.hpp
+../src/../include/blocksci/external/std/detail/associated_types.hpp
 climits
 -
 cstdint
@@ -2148,7 +2148,7 @@ range/v3/detail/disable_warnings.hpp
 range/v3/detail/reenable_warnings.hpp
 -
 
-../src/internal/bitcoin_uint256_hex.hpp
+../src/internal/../internal/bitcoin_uint256_hex.hpp
 blocksci/core/bitcoin_uint256.hpp
 -
 cassert
@@ -2160,7 +2160,7 @@ stdexcept
 string
 -
 
-../src/internal/chain_configuration.hpp
+../src/internal/../internal/chain_configuration.hpp
 blocksci/core/bitcoin_uint256.hpp
 -
 blocksci/core/typedefs.hpp
@@ -2174,15 +2174,15 @@ string
 vector
 -
 
-../src/internal/data_access.hpp
+../src/internal/../internal/data_access.hpp
 data_configuration.hpp
-../src/internal/data_configuration.hpp
+../src/internal/../internal/data_configuration.hpp
 memory
 -
 
-../src/internal/data_configuration.hpp
+../src/internal/../internal/data_configuration.hpp
 chain_configuration.hpp
-../src/internal/chain_configuration.hpp
+../src/internal/../internal/chain_configuration.hpp
 blocksci/core/typedefs.hpp
 -
 wjfilesystem/path.h
@@ -2192,7 +2192,7 @@ string
 vector
 -
 
-../src/internal/file_mapper.hpp
+../src/internal/../internal/file_mapper.hpp
 mio/mmap.hpp
 -
 wjfilesystem/path.h
@@ -2214,9 +2214,9 @@ vector
 tuple
 -
 
-../src/internal/mempool_index.hpp
+../src/internal/../internal/mempool_index.hpp
 file_mapper.hpp
-../src/internal/file_mapper.hpp
+../src/internal/../internal/file_mapper.hpp
 range/v3/algorithm/upper_bound.hpp
 -
 range/v3/view/transform.hpp
@@ -2270,6 +2270,156 @@ sstream
 unordered_map
 -
 csignal
+-
+
+/usr/local/include/json/allocator.h
+cstring
+-
+memory
+-
+
+/usr/local/include/json/config.h
+cstddef
+-
+cstdint
+-
+istream
+-
+memory
+-
+ostream
+-
+sstream
+-
+string
+-
+type_traits
+-
+allocator.h
+/usr/local/include/json/allocator.h
+version.h
+/usr/local/include/json/version.h
+
+/usr/local/include/json/forwards.h
+config.h
+/usr/local/include/json/config.h
+
+/usr/local/include/json/json.h
+config.h
+/usr/local/include/json/config.h
+json_features.h
+/usr/local/include/json/json_features.h
+reader.h
+/usr/local/include/json/reader.h
+value.h
+/usr/local/include/json/value.h
+writer.h
+/usr/local/include/json/writer.h
+
+/usr/local/include/json/json_features.h
+forwards.h
+/usr/local/include/json/forwards.h
+
+/usr/local/include/json/reader.h
+json_features.h
+/usr/local/include/json/json_features.h
+value.h
+/usr/local/include/json/value.h
+deque
+-
+iosfwd
+-
+istream
+-
+stack
+-
+string
+-
+
+/usr/local/include/json/value.h
+forwards.h
+/usr/local/include/json/forwards.h
+array
+-
+exception
+-
+map
+-
+memory
+-
+string
+-
+vector
+-
+
+/usr/local/include/json/version.h
+
+/usr/local/include/json/writer.h
+value.h
+/usr/local/include/json/value.h
+ostream
+-
+string
+-
+vector
+-
+
+/usr/local/include/jsonrpccpp/client.h
+jsonrpccpp/client/client.h
+-
+jsonrpccpp/common/exception.h
+-
+
+/usr/local/include/jsonrpccpp/client/batchcall.h
+jsonrpccpp/common/jsonparser.h
+-
+
+/usr/local/include/jsonrpccpp/client/batchresponse.h
+map
+-
+jsonrpccpp/common/jsonparser.h
+-
+
+/usr/local/include/jsonrpccpp/client/client.h
+iclientconnector.h
+/usr/local/include/jsonrpccpp/client/iclientconnector.h
+batchcall.h
+/usr/local/include/jsonrpccpp/client/batchcall.h
+batchresponse.h
+/usr/local/include/jsonrpccpp/client/batchresponse.h
+jsonrpccpp/common/jsonparser.h
+-
+vector
+-
+map
+-
+
+/usr/local/include/jsonrpccpp/client/iclientconnector.h
+string
+-
+jsonrpccpp/common/exception.h
+-
+
+/usr/local/include/jsonrpccpp/common/errors.h
+map
+-
+string
+-
+jsonparser.h
+/usr/local/include/jsonrpccpp/common/jsonparser.h
+
+/usr/local/include/jsonrpccpp/common/exception.h
+string
+-
+sstream
+-
+exception
+-
+errors.h
+/usr/local/include/jsonrpccpp/common/errors.h
+
+/usr/local/include/jsonrpccpp/common/jsonparser.h
+json/json.h
 -
 
 src/blocksci/blocksci_export.h

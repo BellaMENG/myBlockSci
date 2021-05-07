@@ -13,7 +13,7 @@ FOREACH(file ${files})
     IF(EXISTS "$ENV{DESTDIR}${file}")
 
         EXECUTE_PROCESS(
-            COMMAND /usr/local/bin/cmake -E remove "$ENV{DESTDIR}${file}"
+            COMMAND /usr/bin/cmake -E remove "$ENV{DESTDIR}${file}"
             OUTPUT_VARIABLE rm_out
             RESULT_VARIABLE rm_retval
         )

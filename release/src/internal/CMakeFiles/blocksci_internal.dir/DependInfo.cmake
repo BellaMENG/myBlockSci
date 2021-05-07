@@ -28,8 +28,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "src/internal/.."
   "../external/mio/include"
   "../external/filesystem/include"
-  "../external/range-v3/include"
   "../external/rocksdb/include"
+  "../external/range-v3/include"
   "../external/json/include"
   "../external/endian/src"
   )

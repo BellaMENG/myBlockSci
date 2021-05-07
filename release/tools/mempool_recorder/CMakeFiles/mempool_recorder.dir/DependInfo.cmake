@@ -18,10 +18,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "src/internal/.."
   "../external/mio/include"
   "../external/filesystem/include"
-  "../external/range-v3/include"
-  "../external/bitcoin-api-cpp/src/bitcoinapi/.."
   "../external/rocksdb/include"
+  "../external/range-v3/include"
   "../external/json/include"
+  "../external/bitcoin-api-cpp/src/bitcoinapi/.."
+  "/usr/local/include"
   "../external/clipp/include"
   )
 

@@ -333,14 +333,8 @@ example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../include/blocksci/scrip
 example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../include/blocksci/scripts/scripts_fwd.hpp
 example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../include/blocksci/scripts/witness_unknown_script.hpp
 example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/example.cpp
-example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/parallel_hashmap/btree.h
-example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/parallel_hashmap/phmap.h
-example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/parallel_hashmap/phmap_base.h
-example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/parallel_hashmap/phmap_bits.h
-example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/parallel_hashmap/phmap_config.h
-example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/parallel_hashmap/phmap_dump.h
-example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/parallel_hashmap/phmap_fwd_decl.h
-example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/parallel_hashmap/phmap_utils.h
+example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/index_addresses.hpp
+example/CMakeFiles/blocksci_example.dir/example.cpp.o: ../example/util.hpp
 example/CMakeFiles/blocksci_example.dir/example.cpp.o: src/blocksci/blocksci_export.h
 
 example/CMakeFiles/blocksci_example.dir/performance.cpp.o: ../include/blocksci/address.hpp

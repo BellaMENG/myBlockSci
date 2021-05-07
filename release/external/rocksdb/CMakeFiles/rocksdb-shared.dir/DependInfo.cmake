@@ -239,7 +239,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROCKSDB_SCHED_GETCPU_PRESENT"
   "ROCKSDB_SUPPORT_THREAD_LOCAL"
   "TBB"
-  "rocksdb_shared_EXPORTS"
   )
 
 # The include file search paths:

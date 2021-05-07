@@ -27,17 +27,18 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../external/bitcoin-api-cpp/src/bitcoinapi/.."
+  "/usr/local/include"
+  "../external/clipp/include"
   "../src/internal/.."
   "../src/internal/../../include"
   "src/internal/.."
   "../external/mio/include"
   "../external/filesystem/include"
+  "../external/rocksdb/include"
   "../external/range-v3/include"
+  "../external/json/include"
   "external/secp256k1/include"
   "../external/variant/include"
-  "../external/clipp/include"
-  "../external/rocksdb/include"
-  "../external/json/include"
   "../external/cereal/include"
   )
 

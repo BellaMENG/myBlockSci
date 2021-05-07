@@ -10,6 +10,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../external/clipp/include"
   "../src/../include/blocksci/.."
   "../src/../include/blocksci/external"
   "src"
@@ -18,9 +19,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "src/internal/.."
   "../external/mio/include"
   "../external/filesystem/include"
-  "../external/range-v3/include"
-  "../external/clipp/include"
   "../external/rocksdb/include"
+  "../external/range-v3/include"
   "../external/json/include"
   )
 

@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zmengaa/BlockSci/example/example.cpp" "/home/zmengaa/BlockSci/release/example/CMakeFiles/blocksci_example.dir/example.cpp.o"
+  "/home/zmengaa/BlockSci/example/example0.cpp" "/home/zmengaa/BlockSci/release/example/CMakeFiles/blocksci_example.dir/example0.cpp.o"
+  "/home/zmengaa/BlockSci/example/example1.cpp" "/home/zmengaa/BlockSci/release/example/CMakeFiles/blocksci_example.dir/example1.cpp.o"
   "/home/zmengaa/BlockSci/example/performance.cpp" "/home/zmengaa/BlockSci/release/example/CMakeFiles/blocksci_example.dir/performance.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

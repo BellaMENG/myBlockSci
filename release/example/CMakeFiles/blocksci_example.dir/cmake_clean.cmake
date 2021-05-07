@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/blocksci_example.dir/example.cpp.o"
+  "CMakeFiles/blocksci_example.dir/example0.cpp.o"
+  "CMakeFiles/blocksci_example.dir/example1.cpp.o"
   "CMakeFiles/blocksci_example.dir/performance.cpp.o"
-  "blocksci_example"
   "blocksci_example.pdb"
+  "blocksci_example"
 )
 
 # Per-language clean rules from dependency scanning.

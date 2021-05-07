@@ -334,14 +334,8 @@ example/CMakeFiles/blocksci_example.dir/example.cpp.o
  ../include/blocksci/scripts/scripts_fwd.hpp
  ../include/blocksci/scripts/witness_unknown_script.hpp
  /home/zmengaa/BlockSci/example/example.cpp
- /home/zmengaa/BlockSci/example/parallel_hashmap/btree.h
- /home/zmengaa/BlockSci/example/parallel_hashmap/phmap.h
- /home/zmengaa/BlockSci/example/parallel_hashmap/phmap_base.h
- /home/zmengaa/BlockSci/example/parallel_hashmap/phmap_bits.h
- /home/zmengaa/BlockSci/example/parallel_hashmap/phmap_config.h
- /home/zmengaa/BlockSci/example/parallel_hashmap/phmap_dump.h
- /home/zmengaa/BlockSci/example/parallel_hashmap/phmap_fwd_decl.h
- /home/zmengaa/BlockSci/example/parallel_hashmap/phmap_utils.h
+ /home/zmengaa/BlockSci/example/index_addresses.hpp
+ /home/zmengaa/BlockSci/example/util.hpp
  src/blocksci/blocksci_export.h
 example/CMakeFiles/blocksci_example.dir/performance.cpp.o
  ../include/blocksci/address.hpp

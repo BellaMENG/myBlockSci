@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/blocksci_benchmark.dir/main.cpp.o  -o blocksci_benchmark  -Wl,-rpath,/home/zmengaa/BlockSci/release/src ../src/libblocksci.so -pthread 
+/usr/bin/c++     CMakeFiles/blocksci_benchmark.dir/main.cpp.o  -o blocksci_benchmark -Wl,-rpath,/home/zmengaa/BlockSci/release/src ../src/libblocksci.so -pthread 

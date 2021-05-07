@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/blocksci_check_integrity.dir/main.cpp.o"
-  "blocksci_check_integrity"
   "blocksci_check_integrity.pdb"
+  "blocksci_check_integrity"
 )
 
 # Per-language clean rules from dependency scanning.

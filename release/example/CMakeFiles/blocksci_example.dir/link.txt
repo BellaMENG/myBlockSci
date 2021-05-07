@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/blocksci_example.dir/example.cpp.o CMakeFiles/blocksci_example.dir/performance.cpp.o  -o blocksci_example  -Wl,-rpath,/home/zmengaa/BlockSci/release/src ../src/libblocksci.so -pthread 
+/usr/bin/c++     CMakeFiles/blocksci_example.dir/example.cpp.o CMakeFiles/blocksci_example.dir/example0.cpp.o CMakeFiles/blocksci_example.dir/example1.cpp.o CMakeFiles/blocksci_example.dir/performance.cpp.o  -o blocksci_example -Wl,-rpath,/home/zmengaa/BlockSci/release/src ../src/libblocksci.so -pthread 

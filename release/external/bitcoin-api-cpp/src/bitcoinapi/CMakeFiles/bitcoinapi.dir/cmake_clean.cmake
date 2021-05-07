@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/bitcoinapi.dir/bitcoinapi.cpp.o"
   "libbitcoinapi.pdb"
+  "libbitcoinapi.so.0.1.0"
   "libbitcoinapi.so"
   "libbitcoinapi.so.0"
-  "libbitcoinapi.so.0.1.0"
 )
 
 # Per-language clean rules from dependency scanning.

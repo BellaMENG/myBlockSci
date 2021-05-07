@@ -16,8 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/blocksci_parser.dir/script_input.cpp.o"
   "CMakeFiles/blocksci_parser.dir/script_output.cpp.o"
   "CMakeFiles/blocksci_parser.dir/utxo_address_state.cpp.o"
-  "blocksci_parser"
   "blocksci_parser.pdb"
+  "blocksci_parser"
 )
 
 # Per-language clean rules from dependency scanning.
