@@ -1,5 +1,6 @@
 from test_clustering import *
 import time
+import tempfile as tmpdir_factory
 
 chain = blocksci.Blockchain('/home/zmengaa/blocksci.config', 600000)
 
