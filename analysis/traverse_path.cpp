@@ -16,7 +16,9 @@ int main(int argc, const char* argv[]) {
     string chain_fp = argv[1];
     
     Blockchain chain(chain_fp);
+    cout << "here" << endl;
     string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
+    cout << "here" << endl;
     printAddressFromString(chain, addr);
     
     return 0;
