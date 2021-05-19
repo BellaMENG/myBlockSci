@@ -15,7 +15,7 @@ void printOutputs(Blockchain &chain, string address) {
     auto randomAddress = getAddressFromString(address, chain.getAccess());
     if (randomAddress) {
         RANGES_FOR(auto out, randomAddress->getOutputs()) {
-            Address outAddr = out.getAddress;
+            Address outAddr = out.getAddress();
             cout << outAddr.toString() << endl;
         }
     }
