@@ -1,4 +1,5 @@
 #include "util.hpp"
+#include <string>
 
 
 void printAddressFromString(Blockchain &chain, string address) {
@@ -17,5 +18,6 @@ int main(int argc, const char* argv[]) {
     Blockchain chain(chain_fp);
     string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
     printAddressFromString(chain, addr);
+    
     return 0;
 }
