@@ -12,7 +12,7 @@ void printAddressFromString(Blockchain &chain, string address) {
 }
 
 bool findPath(Blockchain &chain, string src, string dest) {
-    auto srcAddress = getAddressFromString(src, chian.getAccess());
+    auto srcAddress = getAddressFromString(src, chain.getAccess());
     return true;
 }
 
