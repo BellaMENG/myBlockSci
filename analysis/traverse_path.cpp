@@ -11,8 +11,23 @@ void printAddressFromString(Blockchain &chain, string address) {
     }
 }
 
+void printOutputs(Blockchain &chain, string address) {
+    auto randomAddress = getAddressFromString(address, chain.getAccess());
+    if (randomAddress) {
+        RANGES_FOR(auto out, randomAddress->getOutputs()) {
+            Address outAddr = out.getAddress;
+            cout << outAddr.toString() << endl;
+        }
+    }
+}
+
 bool findPath(Blockchain &chain, string src, string dest) {
     auto srcAddress = getAddressFromString(src, chain.getAccess());
+    auto destAddress = getAddressFromString(dest, chain.getAccess());
+    if ((!srcAddress) || (!destAddress)) {
+        return false;
+    }
+    
     return true;
 }
 
@@ -22,7 +37,7 @@ int main(int argc, const char* argv[]) {
     
     Blockchain chain(chain_fp);
     string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
-    printAddressFromString(chain, addr);
-    
+//    printAddressFromString(chain, addr);
+    printOutputs(chain, addr);
     return 0;
 }
