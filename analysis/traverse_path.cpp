@@ -7,12 +7,12 @@ void printAddressFromString(Blockchain &chain, string address) {
     if (randomAddress) {
         cout << "scriptNum: " << randomAddress->scriptNum << endl;
         cout << "type: " << randomAddress->type << endl;
-        Address btcAddr = randomAddress->Address;
+        cout << "toString: " << randomAddress->toString() << endl;
     }
 }
 
 bool findPath(Blockchain &chain, string src, string dest) {
-    auto srcAddress = getAddressFromString(address, chian.getAccess());
+    auto srcAddress = getAddressFromString(src, chian.getAccess());
     return true;
 }
 
