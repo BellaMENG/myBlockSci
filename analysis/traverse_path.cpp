@@ -41,13 +41,16 @@ bool findPath(Blockchain &chain, string src, string dest) {
             Transaction tx = input.transaction();
             RANGES_FOR(auto out, tx.outputs()) {
                 Address out_addr = out.getAddress();
-                if (out_addr == *destAddress)
+                if (out_addr == *destAddress) {
+                    cout << "found" << endl;
                     return true;
+                }
                 else
                     address_queue.push(out_addr);
             }
         }
     }
+    cout << "doesn't exist" << endl;
     return false;
 }
 
