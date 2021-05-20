@@ -1,6 +1,6 @@
 #include "util.hpp"
 #include <string>
-
+#include <queue>
 
 void printAddressFromString(Blockchain &chain, string address) {
     auto randomAddress = getAddressFromString(address, chain.getAccess());
@@ -19,7 +19,8 @@ void printOutputs(Blockchain &chain, string address) {
 //            if (outAddr != *randomAddress)
             RANGES_FOR(auto out, tx.outputs()) {
                 Address out_addr = out.getAddress();
-                cout << out_addr.toString() << endl;
+//                cout << out_addr.toString() << endl;
+                
             }
         }
     }
@@ -31,8 +32,23 @@ bool findPath(Blockchain &chain, string src, string dest) {
     if ((!srcAddress) || (!destAddress)) {
         return false;
     }
-    
-    return true;
+    queue<Address> address_queue;
+    address_queue.push(srcAddress);
+    while (!address_queue.empty()) {
+        Address curr = address_queue.front();
+        address_queue.pop();
+        RANGES_FOR(auto input, (*srcAddrses).getInputs()) {
+            Transaction tx = input.transaction();
+            RANGES_FOR(auto out, tx.outputs()) {
+                Address out_addr = out.getAddress();
+                if (out_addr == destAddress)
+                    return true;
+                else
+                    address_queue.push(out_addr);
+            }
+        }
+    }
+    return false;
 }
 
 int main(int argc, const char* argv[]) {
