@@ -14,10 +14,13 @@ void printAddressFromString(Blockchain &chain, string address) {
 void printOutputs(Blockchain &chain, string address) {
     auto randomAddress = getAddressFromString(address, chain.getAccess());
     if (randomAddress) {
-        RANGES_FOR(auto out, (*randomAddress).getInputs()) {
-            Address outAddr = out.getAddress();
+        RANGES_FOR(auto input, (*randomAddress).getInputs()) {
+            Transaction tx = input.transaction();
 //            if (outAddr != *randomAddress)
-            cout << outAddr.toString() << endl;
+            RANGES_FOR(auto out, tx.outputs()) {
+                Address out_addr = out.getAddress();
+                cout << out_addr.toString() << endl;
+            }
         }
     }
 }
