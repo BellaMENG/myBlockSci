@@ -37,7 +37,7 @@ bool findPath(Blockchain &chain, string src, string dest) {
     while (!address_queue.empty()) {
         Address curr = address_queue.front();
         address_queue.pop();
-        RANGES_FOR(auto input, (*srcAddrses).getInputs()) {
+        RANGES_FOR(auto input, (*srcAddress).getInputs()) {
             Transaction tx = input.transaction();
             RANGES_FOR(auto out, tx.outputs()) {
                 Address out_addr = out.getAddress();
