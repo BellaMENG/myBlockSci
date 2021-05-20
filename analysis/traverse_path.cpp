@@ -19,7 +19,7 @@ void printOutputs(Blockchain &chain, string address) {
 //            if (outAddr != *randomAddress)
             RANGES_FOR(auto out, tx.outputs()) {
                 Address out_addr = out.getAddress();
-//                cout << out_addr.toString() << endl;
+                cout << out_addr.toString() << endl;
                 
             }
         }
@@ -54,10 +54,12 @@ bool findPath(Blockchain &chain, string src, string dest) {
 int main(int argc, const char* argv[]) {
     
     string chain_fp = argv[1];
-    string addr = argv[2];
+    string src_addr = argv[2];
+    string dest_addr = argv[3];
     Blockchain chain(chain_fp);
 //    string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
 //    printAddressFromString(chain, addr);
-    printOutputs(chain, addr);
+    //printOutputs(chain, src_addr);
+    
     return 0;
 }
