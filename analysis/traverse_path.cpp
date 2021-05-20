@@ -33,7 +33,7 @@ bool findPath(Blockchain &chain, string src, string dest) {
         return false;
     }
     queue<Address> address_queue;
-    address_queue.push(srcAddress);
+    address_queue.push(*srcAddress);
     while (!address_queue.empty()) {
         Address curr = address_queue.front();
         address_queue.pop();
@@ -41,7 +41,7 @@ bool findPath(Blockchain &chain, string src, string dest) {
             Transaction tx = input.transaction();
             RANGES_FOR(auto out, tx.outputs()) {
                 Address out_addr = out.getAddress();
-                if (out_addr == destAddress)
+                if (out_addr == *destAddress)
                     return true;
                 else
                     address_queue.push(out_addr);
