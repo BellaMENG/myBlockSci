@@ -89,8 +89,9 @@ void read_addresses(Blockchain& chain, string file_path, int& num_addrs, Address
     addresses = new Address[num_addrs];
     for (int i = 0; i < num_addrs; ++i) {
         inputf >> addr;
-        Address dest_addr = getAddressFromString(addr, chain.getAccess());
-        addresses[i] = dest_addr;
+        auto dest_addr = getAddressFromString(addr, chain.getAccess());
+        if (dest_addr)
+            addresses[i] = *dest_addr;
     }
 }
 
@@ -99,7 +100,7 @@ int main(int argc, const char* argv[]) {
     string chain_fp = argv[1];
     string src_addr = argv[2];
     string dest_addr = argv[3];
-    string dest_addr_file_path = argv[4]
+    string dest_addr_file_path = argv[4];
     Blockchain chain(chain_fp);
     
 //    findPath(chain, src_addr, dest_addr);
@@ -113,8 +114,6 @@ int main(int argc, const char* argv[]) {
 //    printAddressFromString(chain, addr);
     //printOutputs(chain, src_addr);
 
-    
-    
     
     return 0;
 }
