@@ -90,7 +90,7 @@ void read_addresses(Blockchain& chain, string file_path, int& num_addrs, unorder
         inputf >> addr;
         auto dest_addr = getAddressFromString(addr, chain.getAccess());
         if (dest_addr)
-            addresses.insert(dest_addr);
+            addresses->insert(dest_addr);
     }
 }
 
