@@ -81,7 +81,7 @@ bool findPathGroups(Blockchain &chain, string src, unordered_set<Address> dests)
     return false;
 }
 
-void read_addresses(Blockchain& chain, string file_path, int& num_addrs, unordered_set<Address>*& addresses) {
+void read_addresses(Blockchain& chain, string file_path, int& num_addrs, unordered_set<Address>& addresses) {
     std::ifstream inputf(file_path, std::ifstream::in);
     char sharp;
     string addr;
@@ -90,7 +90,7 @@ void read_addresses(Blockchain& chain, string file_path, int& num_addrs, unorder
         inputf >> addr;
         auto dest_addr = getAddressFromString(addr, chain.getAccess());
         if (dest_addr)
-            addresses->insert(*dest_addr);
+            addresses.insert(*dest_addr);
     }
 }
 
@@ -105,14 +105,14 @@ int main(int argc, const char* argv[]) {
 //    findPath(chain, src_addr, dest_addr);
     
     int num_addrs;
-    unordered_set<Address>* dest_addrs = nullptr;
+    unordered_set<Address> dest_addrs;
     
     read_addresses(chain, dest_addr_file_path, num_addrs, dest_addrs);
     
 //    string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
 //    printAddressFromString(chain, addr);
     //printOutputs(chain, src_addr);
-    findPathGroups(chain, src_addr, *dest_addrs);
+    findPathGroups(chain, src_addr, dest_addrs);
     
     return 0;
 }
