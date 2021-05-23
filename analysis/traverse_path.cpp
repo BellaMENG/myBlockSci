@@ -1,6 +1,7 @@
 #include "util.hpp"
 #include <string>
 #include <queue>
+#include <fstream>
 
 void printAddressFromString(Blockchain &chain, string address) {
     auto randomAddress = getAddressFromString(address, chain.getAccess());
@@ -80,16 +81,40 @@ bool findPathGroups(Blockchain &chain, string src, unordered_set<Address> dests)
     return false;
 }
 
+void read_addresses(Blockchain& chain, string file_path, int& num_addrs, Address*& addresses) {
+    std::ifstream inputf(file_path, std::ifstream::in);
+    char sharp;
+    string addr;
+    inputf >> sharp >> num_addrs;
+    addresses = new Address[num_addrs];
+    for (int i = 0; i < num_addrs; ++i) {
+        inputf >> addr;
+        Address dest_addr = getAddressFromString(addr, chain.getAccess());
+        addresses[i] = dest_addr;
+    }
+}
 
 int main(int argc, const char* argv[]) {
     
     string chain_fp = argv[1];
     string src_addr = argv[2];
     string dest_addr = argv[3];
+    string dest_addr_file_path = argv[4]
     Blockchain chain(chain_fp);
+    
+//    findPath(chain, src_addr, dest_addr);
+    
+    int num_addrs;
+    Address* dest_addrs = nullptr;
+    
+    read_addresses(chain, dest_addr_file_path, num_addrs, dest_addrs);
+    
 //    string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
 //    printAddressFromString(chain, addr);
     //printOutputs(chain, src_addr);
-    findPath(chain, src_addr, dest_addr);
+
+    
+    
+    
     return 0;
 }
