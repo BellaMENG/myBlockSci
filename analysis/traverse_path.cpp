@@ -113,7 +113,7 @@ int main(int argc, const char* argv[]) {
 //    string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
 //    printAddressFromString(chain, addr);
     //printOutputs(chain, src_addr);
-
+    findPathGroups(chain, src_addr, dest_addrs);
     
     return 0;
 }
