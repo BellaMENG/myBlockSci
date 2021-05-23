@@ -61,6 +61,8 @@ bool findPathGroups(Blockchain &chain, string src, unordered_set<Address> dests)
     if (!srcAddress)
         return false;
     queue<Address> address_queue;
+    unordered_set<Address> visited;
+    
     address_queue.push(*srcAddress);
     while (!address_queue.empty()) {
         Address curr = address_queue.front();
@@ -69,12 +71,16 @@ bool findPathGroups(Blockchain &chain, string src, unordered_set<Address> dests)
             Transaction tx = input.transaction();
             RANGES_FOR(auto out, tx.outputs()) {
                 Address out_addr = out.getAddress();
-                if ((dests.find(out_addr) != dests.end())) {
-                    cout << "found" << endl;
-                    return true;
+                if (visited.find(out_addr) == visited.end()) {
+                    if ((dests.find(out_addr) != dests.end())) {
+                        cout << "found" << endl;
+                        return true;
+                    }
+                    else {
+                        address_queue.push(out_addr);
+                        visited.insert(out_addr);
+                    }
                 }
-                else
-                    address_queue.push(out_addr);
             }
         }
     }
