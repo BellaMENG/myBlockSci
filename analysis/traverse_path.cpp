@@ -2,6 +2,7 @@
 #include <string>
 #include <queue>
 #include <fstream>
+#include <chrono>
 
 void printAddressFromString(Blockchain &chain, string address) {
     auto randomAddress = getAddressFromString(address, chain.getAccess());
@@ -112,7 +113,11 @@ int main(int argc, const char* argv[]) {
 //    string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
 //    printAddressFromString(chain, addr);
     //printOutputs(chain, src_addr);
+    auto start_clock = chrono::high_resolution_clock::now();
     findPathGroups(chain, src_addr, dest_addrs);
-    
+    auto end_clock = chrono::high_resolution_clock::now();
+    chrono::duration<double> diff = end_clock - start_clock;
+    printf("Elapsed Time: %.9lf s\n", diff.count());
+
     return 0;
 }
