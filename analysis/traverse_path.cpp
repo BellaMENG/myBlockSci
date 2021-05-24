@@ -124,7 +124,7 @@ int main(int argc, const char* argv[]) {
 //    string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
 //    printAddressFromString(chain, addr);
     //printOutputs(chain, src_addr);
-    uint32_t chain.pubkeyCount = addressCount(AddressType::PUBKEYHASH);
+    uint32_t pubkeyCount = chain.addressCount(AddressType::PUBKEYHASH);
     cout << "pubkey count: " << pubkeyCount << endl;
     
     auto start_clock = chrono::high_resolution_clock::now();
