@@ -134,13 +134,13 @@ bool findPathRaw(Address& src, unordered_set<Address>& dests) {
 
 }
 
-uint32_t testFindPath(Blockchain &chain, uint32_t pubkeyCount, unordered_set<Address>& dests) {
+uint32_t testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCount, unordered_set<Address>& dests) {
     queue<Address> address_queue;
     unordered_set<Address> visited;
     
     uint32_t trueResults = 0;
     uint32_t falseResults = 0;
-    for (uint32_t i = 0; i < pubkeyCount; ++i) {
+    for (uint32_t i = start; i < start + pubkeyCount; ++i) {
         Address createAddr(i, AddressType::PUBKEYHASH, chain.getAccess());
         if (findPathRaw(createAddr, dests))
             trueResults++;
@@ -154,7 +154,8 @@ int main(int argc, const char* argv[]) {
     string src_addr = argv[2];
     string dest_addr = argv[3];
     string dest_addr_file_path = argv[4];
-    int num_addresses = stoi(argv[5]);
+    int start = stoi(argv[5]);
+    int num_addresses = stoi(argv[6]);
     Blockchain chain(chain_fp);
     
 //    findPath(chain, src_addr, dest_addr);
@@ -174,7 +175,7 @@ int main(int argc, const char* argv[]) {
     
     auto start_clock = chrono::high_resolution_clock::now();
     
-    uint32_t trueResults = testFindPath(chain, num_addresses, dest_addrs);
+    uint32_t trueResults = testFindPath(chain, start, num_addresses, dest_addrs);
 //    findPathGroups(chain, src_addr, dest_addrs);
 //    for (uint32_t i = 0; i < pubkeyCount; ++i) {
 //        getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
