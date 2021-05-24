@@ -39,7 +39,7 @@ bool findPath(Blockchain &chain, string src, string dest) {
     while (!address_queue.empty()) {
         Address curr = address_queue.front();
         address_queue.pop();
-        RANGES_FOR(auto input, (*srcAddress).getInputs()) {
+        RANGES_FOR(auto input, curr.getInputs()) {
             Transaction tx = input.transaction();
             RANGES_FOR(auto out, tx.outputs()) {
                 Address out_addr = out.getAddress();
@@ -67,7 +67,7 @@ bool findPathGroups(Blockchain &chain, string src, unordered_set<Address> dests)
     while (!address_queue.empty()) {
         Address curr = address_queue.front();
         address_queue.pop();
-        RANGES_FOR(auto input, (*srcAddress).getInputs()) {
+        RANGES_FOR(auto input, curr.getInputs()) {
             Transaction tx = input.transaction();
             RANGES_FOR(auto out, tx.outputs()) {
                 Address out_addr = out.getAddress();
@@ -106,6 +106,50 @@ void getAddrFromScriptNum(Blockchain& chain, uint32_t addressNum, AddressType::E
 //    cout << createAddr.toString() << endl;
 }
 
+bool findPathRaw(Address& src, unordered_set<Address>& dests) {
+    queue<Address> address_queue;
+    unordered_set<Address> visited;
+    
+    address_queue.push(src);
+    while (!address_queue.empty()) {
+        Address curr = address_queue.front();
+        address_queue.pop();
+        RANGES_FOR(auto input, curr.getInputs()) {
+            Transaction tx = input.transaction();
+            RANGES_FOR(auto out, tx.outputs()) {
+                Address out_addr = out.getAddress();
+                if (visited.find(out_addr) == visited.end()) {
+                    if ((dests.find(out_addr) != dests.end())) {
+                        return true;
+                    }
+                    else {
+                        address_queue.push(out_addr);
+                        visited.insert(out_addr);
+                    }
+                }
+            }
+        }
+    }
+    return false;
+
+}
+
+void testFindPath(Blockchain &chain, uint32_t pubkeyCount, unordered_set<Address>& dests) {
+    queue<Address> address_queue;
+    unordered_set<Address> visited;
+    
+    uint32_t trueResults = 0;
+    uint32_t falseResults = 0;
+    for (uint32_t i = 0; i < pubkeyCount; ++i) {
+        Address createAddr(i, AddressType::PUBKEYHASH, chain.getAccess());
+        if (findPathRaw(createAddr, dests))
+            trueResults++;
+        else
+            falseResults++;
+        
+    }
+}
+
 int main(int argc, const char* argv[]) {
     
     string chain_fp = argv[1];
@@ -128,10 +172,11 @@ int main(int argc, const char* argv[]) {
     cout << "pubkey count: " << pubkeyCount << endl;
     
     auto start_clock = chrono::high_resolution_clock::now();
-//    findPathGroups(chain, src_addr, dest_addrs);
-    for (uint32_t i = 0; i < pubkeyCount; ++i) {
-        getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
-    }
+    
+    findPathGroups(chain, src_addr, dest_addrs);
+//    for (uint32_t i = 0; i < pubkeyCount; ++i) {
+//        getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
+//    }
     auto end_clock = chrono::high_resolution_clock::now();
     chrono::duration<double> diff = end_clock - start_clock;
     printf("Elapsed Time: %.9lf s\n", diff.count());
