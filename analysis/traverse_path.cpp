@@ -148,7 +148,7 @@ uint32_t testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCount, u
     return trueResults;
 }
 
-uint32_t random_testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCount, uint32_t step unordered_set<Address>& dests) {
+uint32_t random_testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCount, uint32_t step, unordered_set<Address>& dests) {
     queue<Address> address_queue;
     unordered_set<Address> visited;
     
