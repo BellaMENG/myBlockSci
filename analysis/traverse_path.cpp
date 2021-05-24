@@ -174,7 +174,7 @@ int main(int argc, const char* argv[]) {
     
     auto start_clock = chrono::high_resolution_clock::now();
     
-    uint32_t trueResults = testFindPath(chain, num_addresses, dest_addrss);
+    uint32_t trueResults = testFindPath(chain, num_addresses, dest_addrs);
 //    findPathGroups(chain, src_addr, dest_addrs);
 //    for (uint32_t i = 0; i < pubkeyCount; ++i) {
 //        getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
