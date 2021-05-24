@@ -186,6 +186,6 @@ int main(int argc, const char* argv[]) {
     printf("Number of positive results is %d\n", (int)trueResults);
     float avg = diff.count()/num_addresses;
     printf("Average query time is %.9lf s\n", avg);
-    
+    cout << sizeof(Blockchain) << endl;
     return 0;
 }
