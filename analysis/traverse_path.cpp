@@ -124,10 +124,12 @@ int main(int argc, const char* argv[]) {
 //    string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
 //    printAddressFromString(chain, addr);
     //printOutputs(chain, src_addr);
+    uint32_t pubkeyCount = addressCount(AddressType::PUBKEYHASH);
+    cout << "pubkey count: " << pubkeyCount << endl;
     
     auto start_clock = chrono::high_resolution_clock::now();
 //    findPathGroups(chain, src_addr, dest_addrs);
-    for (uint32_t i = 0; i < std::stoi(argv[5]); ++i) {
+    for (uint32_t i = 0; i < pubkeyCount; ++i) {
         getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
     }
     auto end_clock = chrono::high_resolution_clock::now();
