@@ -182,6 +182,7 @@ int main(int argc, const char* argv[]) {
     auto end_clock = chrono::high_resolution_clock::now();
     chrono::duration<double> diff = end_clock - start_clock;
     printf("Elapsed Time: %.9lf s\n", diff.count());
+    printf("Number of positive results is %d.\n", trueResults);
     float avg = diff.count()/num_addresses;
     
     return 0;
