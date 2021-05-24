@@ -127,7 +127,9 @@ int main(int argc, const char* argv[]) {
     
     auto start_clock = chrono::high_resolution_clock::now();
 //    findPathGroups(chain, src_addr, dest_addrs);
-    getAddrFromScriptNum(chain, 1200, AddressType::PUBKEYHASH, chain.getAccess());
+    for (uint32_t i = 0; i < 2000; ++i) {
+        getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
+    }
     auto end_clock = chrono::high_resolution_clock::now();
     chrono::duration<double> diff = end_clock - start_clock;
     printf("Elapsed Time: %.9lf s\n", diff.count());
