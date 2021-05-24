@@ -146,7 +146,10 @@ uint32_t testFindPath(Blockchain &h_chain, uint32_t start, uint32_t pubkeyCount,
     return trueResults;
 }
 
-
+__global__
+void cuda_findPath(uint32_t start, uint32_t pubkeyCount) {
+    
+}
 
 int main(int argc, const char* argv[]) {
     
@@ -183,7 +186,7 @@ int main(int argc, const char* argv[]) {
     cudaEventCreate(&cuda_end);
     cudaEventRecord(cuda_start);
 
-    uint32_t trueResults = testFindPath(h_chain, start, num_addresses, h_dest_addrs);
+//    cuda_findPath<<<512, 8>>>();
     
     cudaEventRecord(cuda_end);
 
