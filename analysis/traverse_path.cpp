@@ -169,11 +169,12 @@ int main(int argc, const char* argv[]) {
     //printOutputs(chain, src_addr);
     uint32_t pubkeyCount = chain.addressCount(AddressType::PUBKEYHASH);
     cout << "pubkey count: " << pubkeyCount << endl;
-    num_addresses = min(num_addresses, pubkeyCount);
+    if (num_addresses > pubkeyCount)
+        num_addresses = pubkeyCount;
     
     auto start_clock = chrono::high_resolution_clock::now();
     
-    uint32_t trueResults = testFindPath(chain, num_addresses, dests);
+    uint32_t trueResults = testFindPath(chain, num_addresses, dest_addrss);
 //    findPathGroups(chain, src_addr, dest_addrs);
 //    for (uint32_t i = 0; i < pubkeyCount; ++i) {
 //        getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
