@@ -102,7 +102,8 @@ void read_addresses(Blockchain& chain, string file_path, int& num_addrs, unorder
 }
 
 void getAddrFromScriptNum(Blockchain& chain, uint32_t addressNum, AddressType::Enum type, DataAccess &access) {
-    
+    Address createAddr(addressNum, type, access);
+    cout << createAddr.toString() << endl;
 }
 
 int main(int argc, const char* argv[]) {
