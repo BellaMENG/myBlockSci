@@ -134,7 +134,7 @@ bool findPathRaw(Address& src, unordered_set<Address>& dests) {
 
 }
 
-void testFindPath(Blockchain &chain, uint32_t pubkeyCount, unordered_set<Address>& dests) {
+uint32_t testFindPath(Blockchain &chain, uint32_t pubkeyCount, unordered_set<Address>& dests) {
     queue<Address> address_queue;
     unordered_set<Address> visited;
     
@@ -144,10 +144,8 @@ void testFindPath(Blockchain &chain, uint32_t pubkeyCount, unordered_set<Address
         Address createAddr(i, AddressType::PUBKEYHASH, chain.getAccess());
         if (findPathRaw(createAddr, dests))
             trueResults++;
-        else
-            falseResults++;
-        
     }
+    return trueResults;
 }
 
 int main(int argc, const char* argv[]) {
@@ -156,6 +154,7 @@ int main(int argc, const char* argv[]) {
     string src_addr = argv[2];
     string dest_addr = argv[3];
     string dest_addr_file_path = argv[4];
+    int num_addresses = stoi(argv[5]);
     Blockchain chain(chain_fp);
     
 //    findPath(chain, src_addr, dest_addr);
@@ -170,16 +169,19 @@ int main(int argc, const char* argv[]) {
     //printOutputs(chain, src_addr);
     uint32_t pubkeyCount = chain.addressCount(AddressType::PUBKEYHASH);
     cout << "pubkey count: " << pubkeyCount << endl;
+    num_addresses = min(num_addresses, pubkeyCount);
     
     auto start_clock = chrono::high_resolution_clock::now();
     
-    findPathGroups(chain, src_addr, dest_addrs);
+    uint32_t trueResults = testFindPath(chain, num_addresses, dests);
+//    findPathGroups(chain, src_addr, dest_addrs);
 //    for (uint32_t i = 0; i < pubkeyCount; ++i) {
 //        getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
 //    }
     auto end_clock = chrono::high_resolution_clock::now();
     chrono::duration<double> diff = end_clock - start_clock;
     printf("Elapsed Time: %.9lf s\n", diff.count());
-
+    float avg = diff.count()/num_addresses;
+    
     return 0;
 }
