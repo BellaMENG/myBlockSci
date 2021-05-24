@@ -185,8 +185,7 @@ int main(int argc, const char* argv[]) {
     printf("Elapsed Time: %.9lf s\n", diff.count());
     printf("Number of positive results is %d\n", (int)trueResults);
     float avg = diff.count()/num_addresses;
-    cout << num_addresses << endl;
-    printf("Average query time is %.9lf s\n");
+    printf("Average query time is %.9lf s\n", avg);
     
     return 0;
 }
