@@ -101,6 +101,10 @@ void read_addresses(Blockchain& chain, string file_path, int& num_addrs, unorder
     }
 }
 
+void getAddrFromScriptNum(Blockchain& chain, uint32_t addressNum, AddressType::Enum type, DataAccess &access) {
+    
+}
+
 int main(int argc, const char* argv[]) {
     
     string chain_fp = argv[1];
@@ -119,8 +123,10 @@ int main(int argc, const char* argv[]) {
 //    string addr = "3PXswrSTz7tW73BKFcU8GENGFtoagKUJP3";
 //    printAddressFromString(chain, addr);
     //printOutputs(chain, src_addr);
+    
     auto start_clock = chrono::high_resolution_clock::now();
-    findPathGroups(chain, src_addr, dest_addrs);
+//    findPathGroups(chain, src_addr, dest_addrs);
+    getAddrFromScriptNum(chain, 1200, AddressType::PUBKEYHASH, chain.getAccess());
     auto end_clock = chrono::high_resolution_clock::now();
     chrono::duration<double> diff = end_clock - start_clock;
     printf("Elapsed Time: %.9lf s\n", diff.count());
