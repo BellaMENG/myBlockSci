@@ -127,7 +127,7 @@ int main(int argc, const char* argv[]) {
     
     auto start_clock = chrono::high_resolution_clock::now();
 //    findPathGroups(chain, src_addr, dest_addrs);
-    for (uint32_t i = 0; i < 200000000; ++i) {
+    for (uint32_t i = 0; i < std::stoi(argv[5]); ++i) {
         getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
     }
     auto end_clock = chrono::high_resolution_clock::now();
