@@ -5,7 +5,7 @@
 #include <chrono>
 
 __constant__ Blockchain chain;
-
+__constant__ unordered_set<Address> dest_addrs;
 
 void printAddressFromString(Blockchain &h_chain, string address) {
     auto randomAddress = getAddressFromString(address, h_chain.getAccess());
@@ -163,9 +163,10 @@ int main(int argc, const char* argv[]) {
 //    findPath(chain, src_addr, dest_addr);
     
     int num_addrs;
-    unordered_set<Address> dest_addrs;
+    unordered_set<Address> h_dest_addrs;
     
-    read_addresses(h_chain, dest_addr_file_path, num_addrs, dest_addrs);
+    read_addresses(h_chain, dest_addr_file_path, num_addrs, h_dest_addrs);
+    cudaMemcpyToSymbol(&dest_addr, h_dest_addrs, num_addrs*sizeof(Address));
     
     uint32_t pubkeyCount = h_chain.addressCount(AddressType::PUBKEYHASH);
     cout << "pubkey count: " << pubkeyCount << endl;
@@ -182,7 +183,7 @@ int main(int argc, const char* argv[]) {
     cudaEventCreate(&cuda_end);
     cudaEventRecord(cuda_start);
 
-    uint32_t trueResults = testFindPath(h_chain, start, num_addresses, dest_addrs);
+    uint32_t trueResults = testFindPath(h_chain, start, num_addresses, h_dest_addrs);
     
     cudaEventRecord(cuda_end);
 
