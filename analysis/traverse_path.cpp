@@ -3,6 +3,7 @@
 #include <queue>
 #include <fstream>
 #include <chrono>
+#include <time.h>
 
 void printAddressFromString(Blockchain &chain, string address) {
     auto randomAddress = getAddressFromString(address, chain.getAccess());
@@ -148,7 +149,7 @@ uint32_t testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCount, u
     return trueResults;
 }
 
-uint32_t random_testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCount, uint32_t step, unordered_set<Address>& dests) {
+uint32_t even_testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCount, uint32_t step, unordered_set<Address>& dests) {
     queue<Address> address_queue;
     unordered_set<Address> visited;
     
@@ -162,14 +163,25 @@ uint32_t random_testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyC
     return trueResults;
 }
 
+uint32_t random_testFindPath(Blockchain &chain, unordered_set<uint32_t>& random_index, uint32_t count, unordered_set<Address>& dests) {
+    
+}
+
+void random_generator(unordered_set<uint32_t>& random_numbers, uint32_t range, uint32_t size) {
+    srand((unsigned)time(NULL));
+    while(random_numbers.size() < size) {
+        random_numbers.add(rand() % range);
+    }
+}
+
 int main(int argc, const char* argv[]) {
     
     string chain_fp = argv[1];
-    string src_addr = argv[2];
-    string dest_addr = argv[3];
-    string dest_addr_file_path = argv[4];
-    int start = stoi(argv[5]);
-    int num_addresses = stoi(argv[6]);
+//    string src_addr = argv[2];
+//    string dest_addr = argv[3];
+    string dest_addr_file_path = argv[2];
+//    int start = stoi(argv[5]);
+    int num_addresses = stoi(argv[3]);
     Blockchain chain(chain_fp);
     
 //    findPath(chain, src_addr, dest_addr);
@@ -187,10 +199,14 @@ int main(int argc, const char* argv[]) {
     if (num_addresses > pubkeyCount)
         num_addresses = pubkeyCount;
     
+    unordered_set<uint32_t> random_index;
+    random_generator(random_index, pubkeyCount, num_addresses);
+    
     auto start_clock = chrono::high_resolution_clock::now();
     
 //    uint32_t trueResults = testFindPath(chain, start, num_addresses, dest_addrs);
-    uint32_t trueRandResults = random_testFindPath(chain, start, pubkeyCount, pubkeyCount/2000, dest_addrs);
+//    uint32_t trueRandResults = even_testFindPath(chain, start, pubkeyCount, pubkeyCount/2000, dest_addrs);
+    uint32_t random_results = random_testFindPath(chain, random_index, num_addresses, dest_addrs);
 //    findPathGroups(chain, src_addr, dest_addrs);
 //    for (uint32_t i = 0; i < pubkeyCount; ++i) {
 //        getAddrFromScriptNum(chain, i, AddressType::PUBKEYHASH, chain.getAccess());
@@ -198,8 +214,8 @@ int main(int argc, const char* argv[]) {
     auto end_clock = chrono::high_resolution_clock::now();
     chrono::duration<double> diff = end_clock - start_clock;
     printf("Elapsed Time: %.9lf s\n", diff.count());
-    printf("Number of positive results is %d\n", (int)trueRandResults);
-    float avg = diff.count()/2000;
+    printf("Number of positive results is %d\n", (int)random_results);
+    float avg = diff.count()/num_addresses;
     printf("Average query time is %.9lf s\n", avg);
 //    cout << sizeof(Blockchain) << endl;
     return 0;
