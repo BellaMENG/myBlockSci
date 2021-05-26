@@ -164,13 +164,23 @@ uint32_t even_testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCou
 }
 
 uint32_t random_testFindPath(Blockchain &chain, unordered_set<uint32_t>& random_index, uint32_t count, unordered_set<Address>& dests) {
+    queue<Address> address_queue;
+    unordered_set<Address> visited;
     
+    uint32_t trueResults = 0;
+    for (auto itr = random_index; itr != random_index.end(); ++itr) {
+        uint32_t index = *itr;
+        Address createAddr(index, AddressType::PUBKEYHASH, chain.getAccess());
+        if (findPathRaw(createAddr, dests))
+            trueResults++;
+    }
+    return trueResults;
 }
 
 void random_generator(unordered_set<uint32_t>& random_numbers, uint32_t range, uint32_t size) {
     srand((unsigned)time(NULL));
     while(random_numbers.size() < size) {
-        random_numbers.add(rand() % range);
+        random_numbers.insert(rand() % range);
     }
 }
 
