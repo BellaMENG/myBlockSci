@@ -212,6 +212,7 @@ int main(int argc, const char* argv[]) {
     unordered_set<uint32_t> random_index;
     random_generator(random_index, pubkeyCount, num_addresses);
     
+    cout << "start to find path" << endl;
     auto start_clock = chrono::high_resolution_clock::now();
     
 //    uint32_t trueResults = testFindPath(chain, start, num_addresses, dest_addrs);
