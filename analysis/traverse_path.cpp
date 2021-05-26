@@ -168,7 +168,7 @@ uint32_t random_testFindPath(Blockchain &chain, unordered_set<uint32_t>& random_
     unordered_set<Address> visited;
     
     uint32_t trueResults = 0;
-    for (auto itr = random_index; itr != random_index.end(); ++itr) {
+    for (auto itr = random_index.begin(); itr != random_index.end(); ++itr) {
         uint32_t index = *itr;
         Address createAddr(index, AddressType::PUBKEYHASH, chain.getAccess());
         if (findPathRaw(createAddr, dests))
