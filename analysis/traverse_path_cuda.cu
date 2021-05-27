@@ -5,7 +5,7 @@
 #include <fstream>
 #include <chrono>
 
-__constant__ Blockchain chain;
+//__constant__ Blockchain chain;
 __constant__ unordered_set<Address> dest_addrs;
 
 __global__
