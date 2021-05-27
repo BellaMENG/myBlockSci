@@ -29,7 +29,7 @@ int main(int argc, const char* argv[]) {
     cudaEventCreate(&cuda_end);
     cudaEventRecord(cuda_start);
 
-    cudaMemcpyToSymbol(*chain, *h_chain, sizeof(Blockchain));
+//    cudaMemcpyToSymbol(*chain, *h_chain, sizeof(Blockchain));
     
 //    findPath(chain, src_addr, dest_addr);
 
@@ -39,11 +39,12 @@ int main(int argc, const char* argv[]) {
     read_addresses(h_chain, dest_addr_file_path, num_addrs, h_dest_addrs);
     cudaMemcpyToSymbol(&dest_addr, h_dest_addrs, num_addrs*sizeof(Address));
     
+    /*
     uint32_t pubkeyCount = h_chain.addressCount(AddressType::PUBKEYHASH);
     cout << "pubkey count: " << pubkeyCount << endl;
     if (num_addresses > pubkeyCount)
         num_addresses = pubkeyCount;
-    
+    */
     
     float kernel_time;
     
