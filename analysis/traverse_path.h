@@ -23,5 +23,3 @@ uint32_t even_testFindPath(Blockchain &chain, uint32_t start, uint32_t pubkeyCou
 uint32_t random_testFindPath(Blockchain &chain, unordered_set<uint32_t>& random_index, uint32_t count, unordered_set<Address>& dests);
 
 void random_generator(unordered_set<uint32_t>& random_numbers, uint32_t range, uint32_t size);
-
-
