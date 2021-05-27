@@ -6,7 +6,7 @@
 #include <chrono>
 
 //__constant__ Blockchain chain;
-__constant__ unordered_set<Address> dest_addrs;
+//__constant__ unordered_set<Address> dest_addrs;
 
 __global__
 void cuda_findPath(uint32_t start, uint32_t pubkeyCount) {
@@ -37,7 +37,7 @@ int main(int argc, const char* argv[]) {
     unordered_set<Address> h_dest_addrs;
     
     read_addresses(h_chain, dest_addr_file_path, num_addrs, h_dest_addrs);
-    cudaMemcpyToSymbol(&dest_addr, h_dest_addrs, num_addrs*sizeof(Address));
+//    cudaMemcpyToSymbol(&dest_addr, h_dest_addrs, num_addrs*sizeof(Address));
     
     /*
     uint32_t pubkeyCount = h_chain.addressCount(AddressType::PUBKEYHASH);
